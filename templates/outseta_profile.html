@@ -1,35 +1,21 @@
-<!--
 <script>
-var o_profile_options = {
-  "id": "Outseta",
-  "domain": "test-36.outseta.com",
-  "load": "profile",
-};
+  var o_options = {
+    domain: 'test-36.outseta.com'
+  };
+  var o_profile_options = {
+    "id": "Outseta",
+    "domain": "test-36.outseta.com",
+    "load": "profile",
+  };
 </script>
-<script src="https://cdn.outseta.com/outseta.min.js"
-        data-options="o_profile_options">
+<script src="https://cdn.outseta.com/outseta.min.js" data-options="o_profile_options">
 </script>
--->
 
-<div id="profile-embed"></div>
 <script>
-var o_profile_options = {
-  "id": "Outseta",
-  "domain": "test-36.outseta.com",
-  "load": "profile",
-  "profile": {
-    "id": "profile_embed",
-    "mode": "embed",
-    "selector": "#profile-embed"
-  },
-  
-  "accessToken": "{{access_token}}"
-};
+  Outseta.setAccessToken("{{access_token}}")
 
-// Outseta.setAccessToken("{{access_token}}")
-// Outseta.getAccessToken()
-// Outseta.getUser()
-</script>
-<script src="https://cdn.outseta.com/outseta.min.js"
-        data-options="o_profile_options">
+  function logOut() {
+    Outseta.setAccessToken(null);
+    window.location.href = "/logout"
+  }
 </script>
