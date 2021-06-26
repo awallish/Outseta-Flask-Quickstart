@@ -6,6 +6,7 @@ To use it, just paste your Outseta URL and keys into constants.py
 
 ### For authenticated pages
 Include outseta_profile.html and pass the access_token stored in the Flask login user object to the template
+
 See */hidden* for an example
 
 ### For on authenticated pages
